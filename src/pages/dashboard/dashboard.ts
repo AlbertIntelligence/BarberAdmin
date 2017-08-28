@@ -21,7 +21,7 @@ export class DashboardComponent {
   constructor() {
     this.sendLiveTableData();
   }
-
+  // function
    sendLiveTableData() {
      const listOfUsers = firebase.database().ref('TicketList/Users/');
      listOfUsers.on('value', function(snapshot) {
