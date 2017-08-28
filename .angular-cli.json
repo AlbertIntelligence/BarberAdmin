@@ -8,8 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        "assets"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,9 +18,29 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../src/app/css/custom.css",
+        "../src/app/css/bootstrap.min.css",
+        "../src/app/css/font-awesome.css",
+        "../src/app/css/style.default.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../src/app/js/tether.min.js",
+        "../src/app/js/bootstrap.min.js",
+        "../src/app/js/jquery.cookie.js",
+        "../src/app/js/jquery.validate.min.js",
+        "../src/app/js/Chart.min.js",
+        "../src/app/js/charts-home.js",
+        "../src/app/js/front.js",
+
+        "../src/app/js/html5shiv.min.js",
+        "../src/app/js/respond.min.js",
+        "../src/app/js/99347ac47f.js",
+        "../src/app/js/toolkit.js",
+        "../src/app/js/application.js"
+
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

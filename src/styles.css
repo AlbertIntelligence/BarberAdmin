@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+  }
+  #stage {
+    height: 1px;
+    overflow: auto;
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+  }
+}
