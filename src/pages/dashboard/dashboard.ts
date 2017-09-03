@@ -4,7 +4,7 @@ import * as firebase from 'firebase/app';
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-dashboard',
   templateUrl: 'dashboard.html'
 })
 export class DashboardComponent {
@@ -36,6 +36,7 @@ export class DashboardComponent {
        const firstNames = [];
        const lastNames = [];
        snapshot.forEach(function(childSnapshot) {
+
          const id = childSnapshot.key;
          const firstName = childSnapshot.val().firstName.toUpperCase();
          const lastName = childSnapshot.val().lastName.toUpperCase();

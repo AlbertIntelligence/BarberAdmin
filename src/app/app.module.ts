@@ -30,10 +30,11 @@ import * as firebase from 'firebase';
     AngularFireAuthModule,
     FormsModule,
     AppRoutingModule,
-    AngularFireModule
+    AngularFireModule,
+
   ],
   providers: [],
-  bootstrap: [DashboardComponent]
+  bootstrap: [LoginComponent]
 })
 export class AppModule {
   constructor() {
