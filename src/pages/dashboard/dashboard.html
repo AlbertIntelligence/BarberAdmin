@@ -14,7 +14,7 @@
           <!-- Navbar Header-->
           <div class="navbar-header">
             <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-            <div class="brand-text brand-big hidden-lg-down"><span>BarberLife </span><strong>Dashboard</strong></div>
+            <div class="brand-text brand-big hidden-lg-down"><span>BarberMe </span><strong> Dashboard</strong></div>
             <div class="brand-text brand-small"><strong>BD</strong></div></a>
             <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
           </div>
@@ -73,41 +73,40 @@
                       <th>#</th>
                       <th>First Name</th>
                       <th>Last Name</th>
-                      <th>Phone Number</th>
+
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <th scope="row" [innerText]="idsTicket[0]"></th>
+                      <td [innerText]="firstNamesTicket[0]"></td>
+                      <td [innerText]="lastNamesTicket[0]"></td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
+                      <th scope="row" [innerText]="idsTicket[1]"></th>
+                      <td [innerText]="firstNamesTicket[1]"></td>
+                      <td [innerText]="lastNamesTicket[1]"></td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter                            </td>
+                      <th scope="row" [innerText]="idsTicket[2]"></th>
+                      <td [innerText]="firstNamesTicket[2]"></td>
+                      <td [innerText]="lastNamesTicket[2]"></td>
                     </tr>
                     <tr>
-                      <th scope="row">4</th>
-                      <td>mario</td>
-                      <td>the cut</td>
-                      <td>@twitter                            </td>
+                      <th scope="row" [innerText]="idsTicket[3]"></th>
+                      <td [innerText]="firstNamesTicket[3]"></td>
+                      <td [innerText]="lastNamesTicket[3]"></td>
                     </tr>
                     <tr>
-                      <th scope="row">5</th>
-                      <td>billy</td>
-                      <td>mooglie</td>
-                      <td>@twitter                            </td>
+                      <th scope="row" [innerText]="idsTicket[4]"></th>
+                      <td [innerText]="firstNamesTicket[4]"></td>
+                      <td [innerText]="lastNamesTicket[4]"></td>
                     </tr>
-
+                    <tr>
+                      <th scope="row" [innerText]="idsTicket[5]"></th>
+                      <td [innerText]="firstNamesTicket[5]"></td>
+                      <td [innerText]="lastNamesTicket[5]"></td>
+                    </tr>
                     </tbody>
                   </table>
                 </div>
@@ -132,14 +131,39 @@
                       <th>#</th>
                       <th>First Name</th>
                       <th>Last Name</th>
-                      <th>Phone Number</th>
                     </tr>
                     </thead>
-                    <tbody id="ticketListBody">
+                    <tbody >
                     <tr>
-                      <th scope="row"  >{{this.tableObjects.userPosition}}</th>
+                      <th scope="row" [innerText]="idsTicket[0]"></th>
+                      <td [innerText]="firstNamesTicket[0]"></td>
+                      <td [innerText]="lastNamesTicket[0]"></td>
                     </tr>
-
+                    <tr>
+                      <th scope="row" [innerText]="idsTicket[1]"></th>
+                      <td [innerText]="firstNamesTicket[1]"></td>
+                      <td [innerText]="lastNamesTicket[1]"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" [innerText]="idsTicket[2]"></th>
+                      <td [innerText]="firstNamesTicket[2]"></td>
+                      <td [innerText]="lastNamesTicket[2]"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" [innerText]="idsTicket[3]"></th>
+                      <td [innerText]="firstNamesTicket[3]"></td>
+                      <td [innerText]="lastNamesTicket[3]"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" [innerText]="idsTicket[4]"></th>
+                      <td [innerText]="firstNamesTicket[4]"></td>
+                      <td [innerText]="lastNamesTicket[4]"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" [innerText]="idsTicket[5]"></th>
+                      <td [innerText]="firstNamesTicket[5]"></td>
+                      <td [innerText]="lastNamesTicket[5]"></td>
+                    </tr>
                     </tbody>
                   </table>
                 </div>
@@ -154,49 +178,36 @@
       <!-- Projects Section-->
       <section class="projects no-padding-top">
         <div class="container-fluid">
+
+
           <!-- Project-->
           <div class="project">
             <div class="row bg-white has-shadow">
               <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                 <div class="project-title d-flex align-items-center">
-                  <div class="image has-shadow"><img src="../../assets/img/project-1.jpg" alt="..." class="img-fluid"></div>
                   <div class="text">
-                    <h3 class="h4">Reservation 1</h3><small>Lorem Ipsum Dolor</small>
+                    <h4 class="h7" [innerText]='firstNamesReservation[0] + " "+ lastNamesReservation[0]'></h4>
                   </div>
                 </div>
-                <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
+                <div class="project-date"><span class="hidden-sm-down" [innerText]="dateReservation[0]"></span></div>
               </div>
               <div class="right-col col-lg-6 d-flex align-items-center">
-                <div class="time"><i class="fa fa-clock-o"></i>12:00 PM </div>
-                <div class="comments"><i class="fa fa-comment-o"></i>20</div>
-                <div class="project-progress">
-                  <div class="progress">
-                    <div role="progressbar" style="width: 45%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
-                  </div>
-                </div>
+                <div class="time"><i class="fa fa-clock-o" [innerText]='" "+ timeReservation[0]'></i></div>
               </div>
             </div>
           </div>
-          <!-- Project-->
           <div class="project">
             <div class="row bg-white has-shadow">
               <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                 <div class="project-title d-flex align-items-center">
-                  <div class="image has-shadow"><img src="../../assets/img/project-2.jpg" alt="..." class="img-fluid"></div>
                   <div class="text">
-                    <h3 class="h4">Reservation 2</h3><small>Lorem Ipsum Dolor</small>
+                    <h4 class="h7" [innerText]='firstNamesReservation[1] + " "+ lastNamesReservation[1]'></h4>
                   </div>
                 </div>
-                <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
+                <div class="project-date"><span class="hidden-sm-down" [innerText]="dateReservation[1]"></span></div>
               </div>
               <div class="right-col col-lg-6 d-flex align-items-center">
-                <div class="time"><i class="fa fa-clock-o"></i>12:00 PM </div>
-                <div class="comments"><i class="fa fa-comment-o"></i>20</div>
-                <div class="project-progress">
-                  <div class="progress">
-                    <div role="progressbar" style="width: 60%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                  </div>
-                </div>
+                <div class="time"><i class="fa fa-clock-o" [innerText]='" "+ timeReservation[1]'></i></div>
               </div>
             </div>
           </div>
@@ -208,7 +219,7 @@
         <div class="container-fluid">
           <div class="row bg-white has-shadow">
             <!-- Item -->
-            <div class="col-xl-3 col-sm-6">
+            <div class="col-xl-6 col-sm-6">
               <div class="item d-flex align-items-center">
                 <div class="icon bg-violet"><i class="icon-user"></i></div>
                 <div class="title"><span>Client<br>waiting</span>
@@ -216,43 +227,19 @@
                     <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                   </div>
                 </div>
-                <div class="number"><strong>25</strong></div>
+                <div class="number"><strong [innerText]="numberClientWaitingTicketList"></strong></div>
               </div>
             </div>
             <!-- Item -->
-            <div class="col-xl-3 col-sm-6">
+            <div class="col-xl-6 col-sm-6">
               <div class="item d-flex align-items-center">
                 <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                <div class="title"><span>Total <br>recall</span>
+                <div class="title"><span>Total client<br>reservation waiting</span>
                   <div class="progress">
                     <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
                   </div>
                 </div>
-                <div class="number"><strong>70</strong></div>
-              </div>
-            </div>
-            <!-- Item -->
-            <div class="col-xl-3 col-sm-6">
-              <div class="item d-flex align-items-center">
-                <div class="icon bg-green"><i class="icon-bill"></i></div>
-                <div class="title"><span>New<br>Invoices</span>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                  </div>
-                </div>
-                <div class="number"><strong>44</strong></div>
-              </div>
-            </div>
-            <!-- Item -->
-            <div class="col-xl-3 col-sm-6">
-              <div class="item d-flex align-items-center">
-                <div class="icon bg-orange"><i class="icon-check"></i></div>
-                <div class="title"><span>Open<br>Cases</span>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                  </div>
-                </div>
-                <div class="number"><strong>35</strong></div>
+                <div class="number"><strong [innerText]="numberClientWaitingReservation"></strong></div>
               </div>
             </div>
           </div>
@@ -264,7 +251,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
-              <p>BarberLife Powered By CodeKL &copy; 2017</p>
+              <p>BarberMe Powered By CodeKL &copy; 2017</p>
             </div>
             <div class="col-sm-6 text-right">
               <p>Powered by <a href="https://www.codekl.com" class="external">CodeKL</a></p>
