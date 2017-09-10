@@ -4,10 +4,13 @@ import * as firebase from 'firebase/app';
 
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-root',
   templateUrl: 'dashboard.html'
 })
 export class DashboardComponent {
+
+
+
 
    idsTicket = [];
    firstNamesTicket = [];
@@ -22,12 +25,17 @@ export class DashboardComponent {
    numberClientWaitingReservation = 0;
 
 
-  constructor() {
+
+
+constructor() {
     this.TicketListTable();
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
+
   }
+
+
 
   TicketListTable() {
      const listOfUsers = firebase.database().ref('TicketList/Users/');
@@ -44,7 +52,6 @@ export class DashboardComponent {
          firstNames.push(firstName);
          lastNames.push(lastName);
        }.bind(this));
-
 
          this.idsTicket = ids,
          this.firstNamesTicket = firstNames,
