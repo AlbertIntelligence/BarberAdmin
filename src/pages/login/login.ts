@@ -48,7 +48,8 @@ export class LoginComponent {
   }
 
   goToDashBoard() {
-    this.router.navigate(["dashboard"]);
+    //this.router.navigate(["dashboard"]);
+    this.router.navigateByUrl("dashboard");
   }
 
   goToRegisterPage() {
