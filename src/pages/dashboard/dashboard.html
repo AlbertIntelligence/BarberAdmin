@@ -77,35 +77,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[0]"></th>
-                      <td [innerText]="firstNamesTicket[0]"></td>
-                      <td [innerText]="lastNamesTicket[0]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[1]"></th>
-                      <td [innerText]="firstNamesTicket[1]"></td>
-                      <td [innerText]="lastNamesTicket[1]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[2]"></th>
-                      <td [innerText]="firstNamesTicket[2]"></td>
-                      <td [innerText]="lastNamesTicket[2]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[3]"></th>
-                      <td [innerText]="firstNamesTicket[3]"></td>
-                      <td [innerText]="lastNamesTicket[3]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[4]"></th>
-                      <td [innerText]="firstNamesTicket[4]"></td>
-                      <td [innerText]="lastNamesTicket[4]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[5]"></th>
-                      <td [innerText]="firstNamesTicket[5]"></td>
-                      <td [innerText]="lastNamesTicket[5]"></td>
+                    <tr scope="row" *ngFor="let ticket of idsTicket;let i = index;">
+                      <th scope="row"  >{{ticket}}</th>
+                      <td>{{firstNamesTicket[i]}}</td>
+                      <td>{{firstNamesTicket[i]}}</td>
                     </tr>
                     </tbody>
                   </table>
@@ -133,36 +108,11 @@
                       <th>Last Name</th>
                     </tr>
                     </thead>
-                    <tbody >
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[0]"></th>
-                      <td [innerText]="firstNamesTicket[0]"></td>
-                      <td [innerText]="lastNamesTicket[0]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[1]"></th>
-                      <td [innerText]="firstNamesTicket[1]"></td>
-                      <td [innerText]="lastNamesTicket[1]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[2]"></th>
-                      <td [innerText]="firstNamesTicket[2]"></td>
-                      <td [innerText]="lastNamesTicket[2]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[3]"></th>
-                      <td [innerText]="firstNamesTicket[3]"></td>
-                      <td [innerText]="lastNamesTicket[3]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[4]"></th>
-                      <td [innerText]="firstNamesTicket[4]"></td>
-                      <td [innerText]="lastNamesTicket[4]"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row" [innerText]="idsTicket[5]"></th>
-                      <td [innerText]="firstNamesTicket[5]"></td>
-                      <td [innerText]="lastNamesTicket[5]"></td>
+                    <tbody>
+                    <tr scope="row" *ngFor="let ticket of idsTicket;let i = index;">
+                      <th scope="row"  >{{ticket}}</th>
+                      <td>{{firstNamesTicket[i]}}</td>
+                      <td>{{firstNamesTicket[i]}}</td>
                     </tr>
                     </tbody>
                   </table>
@@ -181,36 +131,22 @@
 
 
           <!-- Project-->
-          <div class="project">
+          <div class="project" *ngFor="let idss of idsReservation;let z = index">
             <div class="row bg-white has-shadow">
               <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                 <div class="project-title d-flex align-items-center">
                   <div class="text">
-                    <h4 class="h7" [innerText]='firstNamesReservation[0] + " "+ lastNamesReservation[0]'></h4>
+                    <h4 class="h7" >{{firstNamesReservation[z] + " "+ lastNamesReservation[z]}}</h4>
                   </div>
                 </div>
-                <div class="project-date"><span class="hidden-sm-down" [innerText]="dateReservation[0]"></span></div>
+                <div class="project-date"><span class="hidden-sm-down" >{{dateReservation[z]}}</span></div>
               </div>
               <div class="right-col col-lg-6 d-flex align-items-center">
-                <div class="time"><i class="fa fa-clock-o" [innerText]='" "+ timeReservation[0]'></i></div>
+                <div class="time"><i class="fa fa-clock-o">{{timeReservation[z]}}</i></div>
               </div>
             </div>
           </div>
-          <div class="project">
-            <div class="row bg-white has-shadow">
-              <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
-                <div class="project-title d-flex align-items-center">
-                  <div class="text">
-                    <h4 class="h7" [innerText]='firstNamesReservation[1] + " "+ lastNamesReservation[1]'></h4>
-                  </div>
-                </div>
-                <div class="project-date"><span class="hidden-sm-down" [innerText]="dateReservation[1]"></span></div>
-              </div>
-              <div class="right-col col-lg-6 d-flex align-items-center">
-                <div class="time"><i class="fa fa-clock-o" [innerText]='" "+ timeReservation[1]'></i></div>
-              </div>
-            </div>
-          </div>
+
           <!-- Project-->
         </div>
       </section>

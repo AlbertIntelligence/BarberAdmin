@@ -34,7 +34,7 @@ import * as firebase from 'firebase';
 
   ],
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [DashboardComponent]
 })
 export class AppModule {
   constructor() {

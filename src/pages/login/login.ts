@@ -3,6 +3,7 @@ import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'login.html',
@@ -47,7 +48,7 @@ export class LoginComponent {
   }
 
   goToDashBoard() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(["dashboard"]);
   }
 
   goToRegisterPage() {
