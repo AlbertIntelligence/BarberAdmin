@@ -62,7 +62,7 @@ constructor() {
    }
 
   ReservationTable() {
-    const listOfUsers = firebase.database().ref('Appointments');
+    const listOfUsers = firebase.database().ref('Appointments/Users/');
     listOfUsers.limitToFirst(2).on('value', function(snapshot) {
       const ids = [];
       const dates = [];
@@ -105,7 +105,7 @@ constructor() {
   }
 
   TotalReservation() {
-    const listOfUsers = firebase.database().ref('Appointments');
+    const listOfUsers = firebase.database().ref('Appointments/Users/');
     listOfUsers.on('value', function(snapshot) {
       var numberClientWaitingReservation = 0;
       snapshot.forEach(function(childSnapshot) {
