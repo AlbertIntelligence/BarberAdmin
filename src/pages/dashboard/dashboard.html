@@ -21,7 +21,7 @@
           <!-- Navbar Menu -->
           <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
             <!-- Logout    -->
-            <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+            <li class="nav-item"><a (click)="logout()" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
           </ul>
         </div>
       </div>
@@ -80,7 +80,7 @@
                     <tr scope="row" *ngFor="let ticket of idsTicket;let i = index;">
                       <th scope="row"  >{{ticket}}</th>
                       <td>{{firstNamesTicket[i]}}</td>
-                      <td>{{firstNamesTicket[i]}}</td>
+                      <td>{{lastNamesTicket[i]}}</td>
                     </tr>
                     </tbody>
                   </table>
@@ -112,7 +112,7 @@
                     <tr scope="row" *ngFor="let ticket of idsTicket;let i = index;">
                       <th scope="row"  >{{ticket}}</th>
                       <td>{{firstNamesTicket[i]}}</td>
-                      <td>{{firstNamesTicket[i]}}</td>
+                      <td>{{lastNamesTicket[i]}}</td>
                     </tr>
                     </tbody>
                   </table>

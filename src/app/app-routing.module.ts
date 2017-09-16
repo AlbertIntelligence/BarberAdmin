@@ -6,10 +6,10 @@ import {SettingsComponent} from '../pages/settings/settings';
 import {RegisterComponent} from '../pages/register/register';
 
 const routes: Routes = [
-  { path: '', component: SettingsComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+  { path: 'settings', component: SettingsComponent },
+  { path: 'login', component: LoginComponent }
 ]
 @NgModule({
   imports: [

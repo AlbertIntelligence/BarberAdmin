@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -27,11 +27,12 @@ export class DashboardComponent {
 
 
 
-constructor() {
+constructor(private router: Router) {
     this.TicketListTable();
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
+
 
   }
 
@@ -113,6 +114,10 @@ constructor() {
       }.bind(this));
       this.numberClientWaitingReservation = numberClientWaitingReservation
     }.bind(this));
+  }
+
+  logout() {
+    this.router.navigate(['/dashboard']);
   }
 
 

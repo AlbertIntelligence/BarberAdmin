@@ -19,10 +19,10 @@ import * as firebase from 'firebase';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     LoginComponent,
-    SettingsComponent,
     RegisterComponent,
+    DashboardComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
