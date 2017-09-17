@@ -48,7 +48,7 @@ export class LoginComponent {
   }
 
   goToDashBoard() {
-    this.router.navigate(['dashboard'], { relativeTo: this.route });
+    this.router.navigate(['dashboard']);
 
   }
 

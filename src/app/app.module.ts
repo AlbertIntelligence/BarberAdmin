@@ -22,7 +22,8 @@ import * as firebase from 'firebase';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    SettingsComponent
+    SettingsComponent,
+
   ],
   imports: [
     BrowserModule,

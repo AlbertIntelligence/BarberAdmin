@@ -11,7 +11,7 @@ export class DashboardComponent {
 
 
 
-
+   liveData:any;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -32,8 +32,7 @@ constructor(private router: Router) {
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
-
-
+    this.liveMesssage();
   }
 
 
@@ -118,6 +117,15 @@ constructor(private router: Router) {
 
   logout() {
     this.router.navigate(['/dashboard']);
+  }
+
+  liveMesssage() {
+    let model = this;
+    const liveMessages = firebase.database().ref('Messages/live/');
+    var temp = model.liveData;
+    console.log(temp);
+    liveMessages.set(2);
+
   }
 
 
