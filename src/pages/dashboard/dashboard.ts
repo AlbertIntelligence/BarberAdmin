@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +11,7 @@ export class DashboardComponent {
 
 
 
-
+   liveData:any;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -27,12 +27,12 @@ export class DashboardComponent {
 
 
 
-constructor() {
+constructor(private router: Router) {
     this.TicketListTable();
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
-
+    this.liveMesssage();
   }
 
 
@@ -113,6 +113,19 @@ constructor() {
       }.bind(this));
       this.numberClientWaitingReservation = numberClientWaitingReservation
     }.bind(this));
+  }
+
+  logout() {
+    this.router.navigate(['/dashboard']);
+  }
+
+  liveMesssage() {
+    let model = this;
+    const liveMessages = firebase.database().ref('Messages/live/');
+    var temp = model.liveData;
+    console.log(temp);
+    liveMessages.set(2);
+
   }
 
 

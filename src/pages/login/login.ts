@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -13,8 +14,7 @@ export class LoginComponent {
   email: any = '';
   password: any = '';
 
-  constructor( private router: Router) {
-
+  constructor( private router: Router,private route: ActivatedRoute) {
   }
   /*****************************************************************************
    Function: loginUser
@@ -48,8 +48,8 @@ export class LoginComponent {
   }
 
   goToDashBoard() {
-    //this.router.navigate(["dashboard"]);
-    this.router.navigateByUrl("dashboard");
+    this.router.navigate(['dashboard']);
+
   }
 
   goToRegisterPage() {
