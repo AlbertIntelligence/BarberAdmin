@@ -142,5 +142,15 @@ constructor(private routerLink: Router) {
     liveMessages.set(data);
   }
 
+  nextClient(){
+
+    //const firstUser = firebase.database().ref('TicketList/Users/');
+
+
+  }
+  moveToStandBy(){
+
+  }
+
 
 }

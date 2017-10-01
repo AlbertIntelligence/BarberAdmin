@@ -70,6 +70,11 @@
                   <table class="table table-striped">
                     <thead>
                     <tr>
+                      <th>List Control</th>
+                      <th><button (click)="nextClient()"  class="btn btn-primary btn-responsive">Next</button></th>
+                      <th><button (click)="moveToStandBy()"  class="btn btn-primary btn-responsive">Standby</button></th>
+                    </tr>
+                    <tr>
                       <th>#</th>
                       <th>First Name</th>
                       <th>Last Name</th>
@@ -102,6 +107,10 @@
                 <div class="card-body">
                   <table class="table table-striped">
                     <thead>
+                    <tr>
+                      <th>List Control</th>
+                      <th><button class="btn btn-primary btn-responsive">Remove Standby</button></th>
+                    </tr>
                     <tr>
                       <th>#</th>
                       <th>First Name</th>
