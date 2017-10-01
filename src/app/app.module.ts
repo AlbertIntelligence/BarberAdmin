@@ -12,6 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
+import { enableProdMode } from '@angular/core';
+
+
+enableProdMode();
 
 
 
@@ -33,7 +37,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule,
     AngularFireModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+
 
   ],
   providers: [],

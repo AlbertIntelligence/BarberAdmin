@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-root',
   templateUrl: 'login.html',
 })
+
 export class LoginComponent {
 
   email: any = '';

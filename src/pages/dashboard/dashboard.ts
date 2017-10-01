@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
-import { Validators, FormGroup, FormBuilder,FormControl } from '@angular/forms';
+import {  FormGroup,FormControl } from '@angular/forms';
 
 
 @Component({
@@ -11,8 +11,6 @@ import { Validators, FormGroup, FormBuilder,FormControl } from '@angular/forms';
 export class DashboardComponent {
 
 
-
-   //liveData :any;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -30,7 +28,7 @@ export class DashboardComponent {
 
 
 
-constructor(private router: Router) {
+constructor(private routerLink: Router) {
     this.TicketListTable();
     this.ReservationTable();
     this.ClientWaiting();
@@ -122,7 +120,8 @@ constructor(private router: Router) {
   }
 
   logout() {
-    this.router.navigate(['/dashboard']);
+    //this.routerLink.navigate(['/dashboard']);
+
   }
 
   liveMesssage() {
