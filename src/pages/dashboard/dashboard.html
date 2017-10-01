@@ -183,10 +183,10 @@
       </section>
 
       <section class="dashboard-counts no-padding-top">
-      <form class="form-horizontal">
+      <form class="form-horizontal" [formGroup]="adForm" novalidate>
         <div class="form-group row">
           <div class="col-sm-12">
-            <input type="text" [(ngModel)]="liveData" placeholder="Live Message" class="form-control">
+            <input class="form-control input"  type="text" (change)="saveAdChanges()" placeholder="Live Message" formControlName="live">
           </div>
         </div>
       </form>
