@@ -5,6 +5,7 @@ import {LoginComponent} from '../pages/login/login';
 import {SettingsComponent} from '../pages/settings/settings';
 import {RegisterComponent} from '../pages/register/register';
 
+
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'register', component: RegisterComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
 ]
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes,{ enableTracing: true })
+    RouterModule.forRoot(routes),
   ],
   exports: [ RouterModule ]
 })
