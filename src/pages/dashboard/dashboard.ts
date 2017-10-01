@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
+import { Validators, FormGroup, FormBuilder,FormControl } from '@angular/forms';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class DashboardComponent {
 
 
 
-   liveData:any;
+   //liveData :any;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -24,6 +25,8 @@ export class DashboardComponent {
    numberClientWaitingTicketList = 0;
    numberClientWaitingReservation = 0;
 
+   adForm: FormGroup;
+
 
 
 
@@ -32,7 +35,10 @@ constructor(private router: Router) {
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
-    this.liveMesssage();
+    this.adForm = new FormGroup({
+      live: new FormControl()
+    });
+
   }
 
 
@@ -121,11 +127,20 @@ constructor(private router: Router) {
 
   liveMesssage() {
     let model = this;
-    const liveMessages = firebase.database().ref('Messages/live/');
-    var temp = model.liveData;
+    const liveMessages = firebase.database().ref('Messages/');
+    var temp = model;
     console.log(temp);
-    liveMessages.set(2);
+    liveMessages.update({
+      "live" : temp,
+    });
+    //liveMessages.set(2);
+  }
 
+  saveAdChanges(){
+    const liveMessages = firebase.database().ref('Messages');
+    //const data = this.adForm.value;
+    const data = this.adForm.value;
+    liveMessages.set(data);
   }
 
 

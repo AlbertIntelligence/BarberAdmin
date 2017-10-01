@@ -11,6 +11,7 @@ import {RegisterComponent} from '../pages/register/register';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import * as firebase from 'firebase';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -32,6 +33,7 @@ import * as firebase from 'firebase';
     FormsModule,
     AppRoutingModule,
     AngularFireModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

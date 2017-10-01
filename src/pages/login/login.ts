@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
+
 
 
 
@@ -14,7 +14,7 @@ export class LoginComponent {
   email: any = '';
   password: any = '';
 
-  constructor( private router: Router,private route: ActivatedRoute) {
+  constructor( private router: Router) {
   }
   /*****************************************************************************
    Function: loginUser
@@ -49,6 +49,7 @@ export class LoginComponent {
 
   goToDashBoard() {
     this.router.navigate(['dashboard']);
+    return true;
 
   }
 
