@@ -1,3 +1,10 @@
+/*
+* Created By Lenz Petion
+* CKL Group Inc.
+* Last update October 3 2017
+*
+*
+* */
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
@@ -10,11 +17,14 @@ import {  FormGroup,FormControl } from '@angular/forms';
 })
 export class DashboardComponent {
 
+
    standByDeleteValue:string;
-   deleleteValue:boolean;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
+   idsTicketStandby = [];
+   firstNamesTicketStandby = [];
+   lastNamesTicketStandby = [];
 
    idsReservation = [];
    dateReservation = [];
@@ -23,14 +33,15 @@ export class DashboardComponent {
    lastNamesReservation = [];
    numberClientWaitingTicketList = 0;
    numberClientWaitingReservation = 0;
-
    adForm: FormGroup;
+   dataSnapshot:Array<any> = [];
 
 
 
 
 constructor(private routerLink: Router) {
     this.TicketListTable();
+    this.StandByListTable()
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
@@ -65,6 +76,30 @@ constructor(private routerLink: Router) {
 
      }.bind(this));
    }
+
+  StandByListTable() {
+    const listOfUsers = firebase.database().ref('StandByList/Users/');
+    listOfUsers.limitToFirst(5).on('value', function(snapshot) {
+      const ids = [];
+      const firstNames = [];
+      const lastNames = [];
+      snapshot.forEach(function(childSnapshot) {
+
+        const id = childSnapshot.key;
+        const firstName = childSnapshot.val().firstName.toUpperCase();
+        const lastName = childSnapshot.val().lastName.toUpperCase();
+        ids.push(id);
+        firstNames.push(firstName);
+        lastNames.push(lastName);
+      }.bind(this));
+
+        this.idsTicketStandby = ids,
+        this.firstNamesTicketStandby = firstNames,
+        this.lastNamesTicketStandby =  lastNames
+
+
+    }.bind(this));
+  }
 
   ReservationTable() {
     const listOfUsers = firebase.database().ref('Appointments/Users/');
@@ -138,7 +173,6 @@ constructor(private routerLink: Router) {
 
   saveAdChanges(){
     const liveMessages = firebase.database().ref('Messages');
-    //const data = this.adForm.value;
     const data = this.adForm.value;
     liveMessages.set(data);
   }
@@ -148,12 +182,27 @@ constructor(private routerLink: Router) {
     firstUser.set(null);
   }
   removeFromStandByList() {
-    const firstUser = firebase.database().ref('TicketList/Users/').child(this.idsTicket[this.idsTicket.indexOf(this.standByDeleteValue)]);
+    const firstUser = firebase.database().ref('StandByList/Users/').child(this.idsTicketStandby[this.idsTicketStandby.indexOf(this.standByDeleteValue)]);
     firstUser.set(null);
   }
-  moveToStandBy(){
-    alert(this.idsTicket[0]);
 
+   moveToStandBy() {
+     if (this.idsTicket[0] != null) {
+       const toAdd = (this.idsTicketStandby.length + 1).toString();
+     const oldRef = firebase.database().ref('TicketList/Users/' + this.idsTicket[0]);
+     const newRef = firebase.database().ref('StandByList/Users/'+ toAdd);
+
+     oldRef.once('value', function (snap) {
+       newRef.set(snap.val(), function (error) {
+         if (!error) {
+           oldRef.remove();
+         }
+         else if (typeof(console) !== 'undefined' && console.error) {
+           console.error(error);
+         }
+       });
+     });
+   }
   }
 
 
