@@ -10,7 +10,8 @@ import {  FormGroup,FormControl } from '@angular/forms';
 })
 export class DashboardComponent {
 
-
+   standByDeleteValue:string;
+   deleleteValue:boolean;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -143,12 +144,15 @@ constructor(private routerLink: Router) {
   }
 
   nextClient(){
-
-    //const firstUser = firebase.database().ref('TicketList/Users/');
-
-
+    const firstUser = firebase.database().ref('TicketList/Users/').child(this.idsTicket[0]);
+    firstUser.set(null);
+  }
+  removeFromStandByList() {
+    const firstUser = firebase.database().ref('TicketList/Users/').child(this.idsTicket[this.idsTicket.indexOf(this.standByDeleteValue)]);
+    firstUser.set(null);
   }
   moveToStandBy(){
+    alert(this.idsTicket[0]);
 
   }
 

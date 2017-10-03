@@ -109,7 +109,8 @@
                     <thead>
                     <tr>
                       <th>List Control</th>
-                      <th><button class="btn btn-primary btn-responsive">Remove Standby</button></th>
+                      <th><button (click)="removeFromStandByList()" class="btn btn-primary btn-responsive">Remove Standby</button></th>
+                      <th><input  [(ngModel)]="standByDeleteValue"  type="text" class="form-control col-xs-1" placeholder="# to remove" ngModel required/></th>
                     </tr>
                     <tr>
                       <th>#</th>
@@ -129,10 +130,10 @@
               </div>
             </div>
 
-
           </div>
         </div>
       </section>
+
 
       <!-- Projects Section-->
       <section class="projects no-padding-top">
