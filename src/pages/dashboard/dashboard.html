@@ -109,7 +109,8 @@
                     <thead>
                     <tr>
                       <th>List Control</th>
-                      <th><button class="btn btn-primary btn-responsive">Remove Standby</button></th>
+                      <th><button (click)="removeFromStandByList()" class="btn btn-primary btn-responsive">Remove Standby</button></th>
+                      <th><input  [(ngModel)]="standByDeleteValue"  type="text" class="form-control col-xs-1" placeholder="# to remove" ngModel required/></th>
                     </tr>
                     <tr>
                       <th>#</th>
@@ -118,10 +119,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr scope="row" *ngFor="let ticket of idsTicket;let i = index;">
+                    <tr scope="row" *ngFor="let ticket of idsTicketStandby;let i = index;">
                       <th scope="row"  >{{ticket}}</th>
-                      <td>{{firstNamesTicket[i]}}</td>
-                      <td>{{lastNamesTicket[i]}}</td>
+                      <td>{{firstNamesTicketStandby[i]}}</td>
+                      <td>{{lastNamesTicketStandby[i]}}</td>
                     </tr>
                     </tbody>
                   </table>
@@ -129,10 +130,10 @@
               </div>
             </div>
 
-
           </div>
         </div>
       </section>
+
 
       <!-- Projects Section-->
       <section class="projects no-padding-top">
