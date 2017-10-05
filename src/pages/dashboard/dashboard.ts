@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 import {  FormGroup,FormControl } from '@angular/forms';
+import {forEach} from '@angular/router/src/utils/collection';
 
 
 @Component({
@@ -41,7 +42,7 @@ export class DashboardComponent {
 
 constructor(private routerLink: Router) {
     this.TicketListTable();
-    this.StandByListTable()
+    this.StandByListTable();
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
@@ -168,7 +169,6 @@ constructor(private routerLink: Router) {
     liveMessages.update({
       "live" : temp,
     });
-    //liveMessages.set(2);
   }
 
   saveAdChanges(){
@@ -182,13 +182,15 @@ constructor(private routerLink: Router) {
     firstUser.set(null);
   }
   removeFromStandByList() {
-    const firstUser = firebase.database().ref('StandByList/Users/').child(this.idsTicketStandby[this.idsTicketStandby.indexOf(this.standByDeleteValue)]);
+    const x =   parseInt(this.standByDeleteValue) -1;
+    const firstUser = firebase.database().ref('StandByList/Users/').child(this.idsTicketStandby[x.toString()]);
     firstUser.set(null);
+
   }
 
    moveToStandBy() {
      if (this.idsTicket[0] != null) {
-       const toAdd = (this.idsTicketStandby.length + 1).toString();
+       var toAdd = (this.idsTicketStandby.length + 1).toString();
      const oldRef = firebase.database().ref('TicketList/Users/' + this.idsTicket[0]);
      const newRef = firebase.database().ref('StandByList/Users/'+ toAdd);
 
@@ -204,6 +206,8 @@ constructor(private routerLink: Router) {
      });
    }
   }
+
+
 
 
 }
