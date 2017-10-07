@@ -8,8 +8,8 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
-import {  FormGroup,FormControl } from '@angular/forms';
-import {forEach} from '@angular/router/src/utils/collection';
+import {  FormGroup, FormControl } from '@angular/forms';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -18,8 +18,12 @@ import {forEach} from '@angular/router/src/utils/collection';
 })
 export class DashboardComponent {
 
-
-   standByDeleteValue:string;
+   firstName: string;
+   lastName: string;
+   ticketConfirmation: any;
+   standByDeleteValue: string;
+   lastPosition: any;
+   userPosition: any;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -35,7 +39,8 @@ export class DashboardComponent {
    numberClientWaitingTicketList = 0;
    numberClientWaitingReservation = 0;
    adForm: FormGroup;
-   dataSnapshot:Array<any> = [];
+   dataSnapshot: Array<any> = [];
+   dataSnapshotStandBy:Array<any> = [];
 
 
 
@@ -46,6 +51,8 @@ constructor(private routerLink: Router) {
     this.ReservationTable();
     this.ClientWaiting();
     this.TotalReservation();
+    this.getLastClient();
+    this.updateDataSnapshot();
     this.adForm = new FormGroup({
       live: new FormControl()
     });
@@ -53,6 +60,9 @@ constructor(private routerLink: Router) {
   }
 
 
+  ngOnInit() {
+  this.showTicketDiv();
+  }
 
   TicketListTable() {
      const listOfUsers = firebase.database().ref('TicketList/Users/');
@@ -141,7 +151,7 @@ constructor(private routerLink: Router) {
       snapshot.forEach(function(childSnapshot) {
         numberClientWaitingTicketList++;
       }.bind(this));
-      this.numberClientWaitingTicketList = numberClientWaitingTicketList
+      this.numberClientWaitingTicketList = numberClientWaitingTicketList;
     }.bind(this));
   }
 
@@ -157,7 +167,7 @@ constructor(private routerLink: Router) {
   }
 
   logout() {
-    //this.routerLink.navigate(['/dashboard']);
+    // this.routerLink.navigate(['/dashboard']);
 
   }
 
@@ -171,13 +181,13 @@ constructor(private routerLink: Router) {
     });
   }
 
-  saveAdChanges(){
+  saveAdChanges() {
     const liveMessages = firebase.database().ref('Messages');
     const data = this.adForm.value;
     liveMessages.set(data);
   }
 
-  nextClient(){
+  nextClient() {
     const firstUser = firebase.database().ref('TicketList/Users/').child(this.idsTicket[0]);
     firstUser.set(null);
   }
@@ -206,6 +216,78 @@ constructor(private routerLink: Router) {
      });
    }
   }
+
+  public getLastClient() {
+    const dbRefObject = firebase.database().ref('TicketList/Users/');
+    dbRefObject.on('value', function(snapshot) {
+      const ids = [];
+      snapshot.forEach(function(childSnapshot) {
+        const id = childSnapshot.key
+        ids.pop();
+        ids.push(id);
+      }.bind(this));
+      this.lastPosition = ids;
+    }.bind(this));
+  }
+
+  takeANumber() {
+  if (this.isAvailable) {
+      const dbRefObject = firebase.database().ref().child('TicketList/Users/');
+      this.userPosition = Number(this.lastPosition) + 1;
+      const uPosition = this.userPosition;
+      this.ticketConfirmation = uPosition;
+      dbRefObject.child(uPosition).set(
+        {
+          'firstName': this.firstName,
+          'lastName': this.lastName,
+          'email': 'notAvailable',
+          'phoneNumber': 'notAvailable',
+          'uid': 'notAvailable'
+        }
+      );
+    }
+
+  }
+
+  updateDataSnapshot() {
+    let model = this;
+    firebase.database().ref('TicketList/Users/')
+      .on('value', function(snapshot) {
+        let tickets = snapshot.val();
+        model.dataSnapshot = [];
+        for (const property in tickets) {
+          if (tickets.hasOwnProperty(property)) {
+            model.dataSnapshot.push(tickets[property]);
+          }
+        }
+      });
+
+    firebase.database().ref('StandByList/Users/')
+      .on('value', function(snapshot) {
+        let tickets = snapshot.val();
+        model.dataSnapshot = [];
+        for (const property in tickets) {
+          if (tickets.hasOwnProperty(property)) {
+            model.dataSnapshotStandBy.push(tickets[property]);
+          }
+        }
+      });
+  }
+
+  isAvailable(): Boolean {
+    return (this.dataSnapshot.find(item => item.firstName === this.firstName) === undefined);
+  }
+  showTicketDiv() {
+
+
+    // $('#mainDiv').hide().delay( 5000 );
+    // $('#mainDiv').hide().delay( 7000 );
+    // $('#mainDiv').hide(5000);
+    // $('#mainDiv').show();
+    // $("#ticketPosition").delay(5000).hide(0);
+  }
+
+
 
 
 
