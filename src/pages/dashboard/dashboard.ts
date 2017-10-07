@@ -24,6 +24,7 @@ export class DashboardComponent {
    standByDeleteValue: string;
    lastPosition: any;
    userPosition: any;
+   hiddenPublicity = false;
    idsTicket = [];
    firstNamesTicket = [];
    lastNamesTicket = [];
@@ -278,13 +279,22 @@ constructor(private routerLink: Router) {
     return (this.dataSnapshot.find(item => item.firstName === this.firstName) === undefined);
   }
   showTicketDiv() {
+    var counter = 0,
+      divs = $('#mainDiv, #seconDiv');
 
+    function showDiv () {
+      divs.hide(2000) // hide all divs
+        .filter(function (index) { return index === counter % 2; }) // figure out correct div to show
+        .show('fast'); // and show it
 
-    // $('#mainDiv').hide().delay( 5000 );
-    // $('#mainDiv').hide().delay( 7000 );
-    // $('#mainDiv').hide(5000);
-    // $('#mainDiv').show();
-    // $("#ticketPosition").delay(5000).hide(0);
+      counter++;
+    }
+    showDiv();
+
+    setInterval(function () {
+      showDiv();
+    }, 10 * 1000);
+
   }
 
 
