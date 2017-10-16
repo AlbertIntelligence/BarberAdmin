@@ -62,7 +62,7 @@ constructor(private routerLink: Router) {
 
 
   ngOnInit() {
-  this.showTicketDiv();
+  //this.showTicketDiv();
   }
 
   TicketListTable() {
@@ -279,23 +279,25 @@ constructor(private routerLink: Router) {
     return (this.dataSnapshot.find(item => item.firstName === this.firstName) === undefined);
   }
   showTicketDiv() {
+    var i;
     var counter = 0,
       divs = $('#mainDiv, #seconDiv');
 
     function showDiv () {
-      divs.hide(2000) // hide all divs
-        .filter(function (index) { return index === counter % 2; }) // figure out correct div to show
+      divs.hide(2000)
+        .filter(function (index) { return index === counter % 2; })
         .show('fast'); // and show it
-
+      alert(divs[0].getElementsByClassName('name'));
       counter++;
     }
     showDiv();
 
     setInterval(function () {
       showDiv();
-    }, 10 * 1000);
+    }, 2 * 1000);
 
   }
+
 
 
 
