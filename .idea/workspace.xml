@@ -2,7 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e667a9-4709-412b-895c-f7ff4e38da08" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/2chainz.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/avatar-mdo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/azalea.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/childish.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/codekl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/cudi.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/iphone-flat-sized.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/iphone-perspective-sized.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/iphone-reverse-perspective-sized.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/iphone-to-iphone-sized.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/kanye.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/lilwayne.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/minaj.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/mosdef.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/nicki.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/project-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/project-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/project-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/project-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-0.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-10.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-11.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-12.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-13.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-14.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-15.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-16.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-17.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-4.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-5.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-6.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-7.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-8.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/startup-9.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/template-mac.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/img/yeezus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bg.e74dbb9b8349942a1269.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fontawesome-webfont.674f50d287a8c48dc19b.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fontawesome-webfont.912ec66d7572ff821749.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fontawesome-webfont.af7ae505a9eed503f8b8.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fontawesome-webfont.b06871f281fee6b241d6.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fontawesome-webfont.fee66e712a8a08eef580.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/inline.8eac387e568319d78765.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/main.cf159fc2f077166acb4e.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/polyfills.7c6537f72b6357495542.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts.ee8dcb10d96f23a3e88f.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles.26e266d7efea66b7ef6d.bundle.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/vendor.f3301100e2355c3dd919.bundle.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/src/pages/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/dashboard.ts" afterPath="$PROJECT_DIR$/src/pages/dashboard/dashboard.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -17,11 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/dashboard/dashboard.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-939">
-              <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state relative-caret-position="178">
+              <caret line="195" column="19" lean-forward="false" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#83#125#0" expanded="true" />
@@ -30,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/dashboard/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="257" column="3" lean-forward="false" selection-start-line="257" selection-start-column="3" selection-end-line="257" selection-end-column="3" />
+            <state relative-caret-position="298">
+              <caret line="183" column="145" lean-forward="false" selection-start-line="183" selection-start-column="145" selection-end-line="183" selection-end-column="145" />
               <folding />
             </state>
           </provider>
@@ -54,11 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ClientWaiting</find>
-      <find>numberClientWaitingTicketList</find>
-      <find>firstNamesTicket</find>
-      <find>normal</find>
-      <find>RouterModule</find>
       <find>register</find>
       <find>ActivatedRoute</find>
       <find>liveMesssage</find>
@@ -84,6 +144,11 @@
       <find>input</find>
       <find>img</find>
       <find>divsdivs</find>
+      <find>Take a number</find>
+      <find>Next</find>
+      <find>App</find>
+      <find>nextClient()</find>
+      <find>reservation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,8 +189,8 @@
         <option value="$PROJECT_DIR$/src/pages/settings/settings.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/dashboard.scss" />
-        <option value="$PROJECT_DIR$/src/pages/dashboard/dashboard.ts" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/pages/dashboard/dashboard.ts" />
       </list>
     </option>
   </component>
@@ -167,8 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,6 +267,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,11 +415,12 @@
       <workItem from="1507309816422" duration="3073000" />
       <workItem from="1507388803537" duration="15343000" />
       <workItem from="1508177618303" duration="273000" />
+      <workItem from="1508433677221" duration="1358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176855000" />
+    <option name="totallyTimeSpent" value="178213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -418,9 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,28 +778,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/dashboard/dashboard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-939">
-          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#83#125#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/dashboard/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="257" column="3" lean-forward="false" selection-start-line="257" selection-start-column="3" selection-end-line="257" selection-end-column="3" />
+        <state relative-caret-position="298">
+          <caret line="183" column="145" lean-forward="false" selection-start-line="183" selection-start-column="145" selection-end-line="183" selection-end-column="145" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/dashboard/dashboard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="195" column="19" lean-forward="false" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#83#125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

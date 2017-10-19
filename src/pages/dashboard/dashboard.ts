@@ -192,6 +192,10 @@ constructor(private routerLink: Router) {
     const firstUser = firebase.database().ref('TicketList/Users/').child(this.idsTicket[0]);
     firstUser.set(null);
   }
+  nextAppointments() {
+    const firstUser = firebase.database().ref('Appointments/Users/').child(this.idsReservation[0]);
+    firstUser.set(null);
+  }
   removeFromStandByList() {
     const x =   parseInt(this.standByDeleteValue) -1;
     const firstUser = firebase.database().ref('StandByList/Users/').child(this.idsTicketStandby[x.toString()]);
