@@ -168,7 +168,7 @@ constructor(private routerLink: Router) {
   }
 
   logout() {
-    // this.routerLink.navigate(['/dashboard']);
+     this.routerLink.navigate(['/login']);
 
   }
 
