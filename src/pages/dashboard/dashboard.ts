@@ -74,8 +74,8 @@ constructor(private routerLink: Router) {
        snapshot.forEach(function(childSnapshot) {
 
          const id = childSnapshot.key;
-         const firstName = childSnapshot.val().firstName.toUpperCase();
-         const lastName = childSnapshot.val().lastName.toUpperCase();
+         const firstName = childSnapshot.val().firstName;
+         const lastName = childSnapshot.val().lastName;
          ids.push(id);
          firstNames.push(firstName);
          lastNames.push(lastName);
