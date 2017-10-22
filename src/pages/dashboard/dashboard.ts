@@ -200,6 +200,7 @@ constructor(private routerLink: Router) {
     const x =   parseInt(this.standByDeleteValue) -1;
     const firstUser = firebase.database().ref('StandByList/Users/').child(this.idsTicketStandby[x.toString()]);
     firstUser.set(null);
+    this.standByDeleteValue = null;
 
   }
 
