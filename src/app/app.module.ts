@@ -5,6 +5,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import {DashboardComponent} from '../pages/dashboard/dashboard';
+import {ListItemComponent} from '../pages/reservation-list-item/reservation-list-item';
 import {LoginComponent} from '../pages/login/login';
 import {SettingsComponent} from '../pages/settings/settings';
 import {RegisterComponent} from '../pages/register/register';
@@ -13,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
 import { enableProdMode } from '@angular/core';
+import { VirtualScrollModule } from 'angular2-virtual-scroll';
 
 
 enableProdMode();
@@ -28,6 +30,7 @@ enableProdMode();
     RegisterComponent,
     DashboardComponent,
     SettingsComponent,
+    ListItemComponent,
 
   ],
   imports: [
@@ -38,6 +41,7 @@ enableProdMode();
     AppRoutingModule,
     AngularFireModule,
     ReactiveFormsModule,
+    VirtualScrollModule
 
 
 
