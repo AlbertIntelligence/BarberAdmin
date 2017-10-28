@@ -10,6 +10,7 @@ import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 import {  FormGroup, FormControl } from '@angular/forms';
 import * as $ from 'jquery';
+import {ListItemComponent} from '../reservation-list-item/reservation-list-item';
 
 
 @Component({
@@ -17,6 +18,8 @@ import * as $ from 'jquery';
   templateUrl: 'dashboard.html'
 })
 export class DashboardComponent {
+
+   items: ListItemComponent[];
 
    firstName: string;
    lastName: string;
@@ -68,6 +71,7 @@ constructor(private routerLink: Router) {
   TicketListTable() {
      const listOfUsers = firebase.database().ref('TicketList/Users/');
      listOfUsers.limitToFirst(5).on('value', function(snapshot) {
+       const other2 = [];
        const ids = [];
        const firstNames = [];
        const lastNames = [];
@@ -80,12 +84,9 @@ constructor(private routerLink: Router) {
          firstNames.push(firstName);
          lastNames.push(lastName);
        }.bind(this));
-
          this.idsTicket = ids,
          this.firstNamesTicket = firstNames,
-         this.lastNamesTicket =  lastNames
-
-
+         this.lastNamesTicket =  lastNames;
      }.bind(this));
    }
 
@@ -114,8 +115,9 @@ constructor(private routerLink: Router) {
   }
 
   ReservationTable() {
-    const listOfUsers = firebase.database().ref('Appointments/Users/');
-    listOfUsers.limitToFirst(2).on('value', function(snapshot) {
+    const listOfUsers = firebase.database().ref('Appointments/Users/').orderByChild('dateTimeStamp');
+    listOfUsers.on('value', function(snapshot) {
+      const other = [];
       const ids = [];
       const dates = [];
       const times = [];
@@ -132,9 +134,9 @@ constructor(private routerLink: Router) {
         times.push(time);
         firstNames.push(firstName);
         lastNames.push(lastName);
+        other.push(childSnapshot.val());
       }.bind(this));
-
-
+        this.items = other;
         this.idsReservation = ids,
         this.dateReservation = dates,
         this.timeReservation = times,
