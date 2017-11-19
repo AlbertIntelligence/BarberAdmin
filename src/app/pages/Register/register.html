@@ -1,0 +1,79 @@
+<div class="page login-page">
+  <div class="container d-flex align-items-center">
+    <div class="form-holder has-shadow">
+      <div class="row">
+        <!-- Logo & Information Panel-->
+        <div class="col-lg-6">
+          <div class="info d-flex align-items-center">
+            <div class="content">
+              <div class="logo">
+                <h1>Dashboard</h1>
+              </div>
+              <p>BarbeMe  Ticket and reserveration admin panel.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Form Panel    -->
+        <div class="col-lg-6 bg-white">
+          <div class="form d-flex align-items-center">
+            <div class="content">
+              <form id="register-form">
+                <div class="form-group">
+                  <input id="register-username" type="text" name="registerUsername" required class="input-material">
+                  <label for="register-username" class="label-material">User Name</label>
+                </div>
+                <div class="form-group">
+                  <input id="register-email" type="email" name="registerEmail" required class="input-material">
+                  <label for="register-email" class="label-material">Email Address      </label>
+                </div>
+                <div class="form-group">
+                  <input id="register-passowrd" type="password" name="registerPassword" required class="input-material">
+                  <label for="register-passowrd" class="label-material">password        </label>
+                </div>
+                <div class="form-group terms-conditions">
+                  <input id="license" type="checkbox" class="checkbox-template">
+                  <label for="license">Agree the terms and policy</label>
+                </div>
+                <input [routerLink]="['/dashboard']" id="register" type="submit" value="Register" class="btn btn-primary">
+              </form><small>Already have an account? </small><a [routerLink]="['/login']" class="signup">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyrights text-center">
+    <p>Powered by <a href="http://www.codekl.com" class="external">CodeKL</a></p>
+    <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+  </div>
+</div>
+<!-- Javascript files-->
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBShXmN6TIS7xy2Tnr65NkCJbAEXM51g7Q",
+    authDomain: "mpc-app-37f6f.firebaseapp.com",
+    databaseURL: "https://mpc-app-37f6f.firebaseio.com",
+    projectId: "mpc-app-37f6f",
+    storageBucket: "mpc-app-37f6f.appspot.com",
+    messagingSenderId: "351355658098"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.cookie.js"> </script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/front.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+<!---->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
