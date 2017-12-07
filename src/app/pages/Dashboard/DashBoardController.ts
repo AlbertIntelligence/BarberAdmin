@@ -6,7 +6,7 @@
 *
 * */
 import { Component } from '@angular/core';
-//import * as firebase from '../../../../node_modules/firebase/app';
+import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 import {  FormGroup, FormControl } from '@angular/forms';
 //import * as $ from 'jquery';

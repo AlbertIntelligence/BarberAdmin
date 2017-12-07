@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import * as firebase from 'firebase/app';
+ import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 
 
@@ -35,11 +35,11 @@ export class LoginComponent {
     }
   }
 
-  logout(): firebase.Promise<void> {
+  logout(): Promise<void> {
     return firebase.auth().signOut();
   }
 
-  resetPassword(email: string): firebase.Promise<any> {
+  resetPassword(email: string): Promise<any> {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
